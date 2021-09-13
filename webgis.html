@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--Import leaflet jquery and slide bar-->
+    <script src="libraries/leaflet-src.js"></script>
+    <script src="libraries/jquery.js"></script>
+    <script src="libraries/busyLoad.js"></script>
+    <script src="libraries/leaflet-sidebar.js"></script>
+
+    <!--Import materialize.css-->
+    
+    <link rel="stylesheet" href="css/bootstrap-slider.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+           
+
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/busyLoad.css" />
+    <link rel="stylesheet" href="css/leaflet-sidebar.css" />
+
+    <title>eConservation Africa</title>
+  </head>
+
+
+  <body>
+    <!-- nav bar -->
+      <nav>
+        <!-- https://material.io/tools/color/#!/?view.left=0&view.right=0 -->
+        <div class="nav-wrapper blue-grey lighten-1">
+          <a href="" class="brand-logo"><p>eConservation</p></a>
+          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          
+        </div>
+ 
+      </nav>
+      <ul id="slide-out" class="sidenav">
+        <div class="slider-contents">
+        <li>
+          <div class="row">
+            <div class="col s12">
+              <div class="card">
+                <div class="card-image card-image_sites">
+                  <img src="https://www.euractiv.com/wp-content/uploads/sites/2/2019/01/palm-800x450.jpg">
+                  <span class="card-title">Project Sites</span>
+                  <a class="btn-floating halfway-fab waves-effect waves-light biopama-gray"><i class="material-icons add_sites">add</i></a>
+                </div>
+                <div class="card-content sites_main">
+                  <span class="legend_name card-title activator">Legend<i class="material-icons right">more_vert</i></span>
+                  <p>
+                    <div class="c-legend-content">
+                      <ul class="c-legend-choropleth"><li>
+                      <div class="outside_button active_layer icon-choropleth" style="background-color: #0b395a!important; "></div>
+                      <p><span class="name"><i>Outside Protected Areas</i></span></p></li>
+                      <li>
+                      <div class="inside_button active_layer icon-choropleth" style="background-color: #8dbe50!important; ; "></div>
+                      <p><span class="name"><i>Inside Protected Areas</i></span></p></li>
+                      <li>
+                      </div>
+                      <div id="show_pa"><span class="pa_add">Add Terrestrial Protected Areas<i class="material-icons right">layers</i></span></div>
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title white-text">Project Sites <i class="material-icons right">close</i></span>
+                  <p>The locations shown here indicate the specific sites of implemented projects or activities part of a project, with the highest geographic resolution possible. These sites range from different scales depending on the precision indicated in the project. Multiple sites may correspond to an implemented project, ranging from different scales, and sometimes spanning over different countries.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+
+      </div>
+      </ul>
+      
+
+
+
+        <!-- div map -->
+	      <div id="map"></div>
+        <!-- end of map -->
+  </body>
+
+
+  <script>
+         $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  $(document).ready(function(){
+  setTimeout(function() {
+  $('body > nav > div > a.sidenav-trigger > i').trigger('click');
+}, 1000);
+});
+  </script>
+  <!-- include our own javascript -->
+  <script src="stats.js"></script>
+
+      <script src="libraries/bootstrap-slider.js"></script>
+      <script src="libraries/highcharts.js"></script>
+      <script src="libraries/highcharts_more.js"></script>
+</html>
